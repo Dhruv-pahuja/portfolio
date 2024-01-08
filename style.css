@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: rgb(0, 0, 33); */
+    background-color: white;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgb(18, 18, 60);
+}
+
+
+.left {
+    font-size: 1.4rem;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 22px;
+}
+
+.choices a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.choices a:hover {
+    color: #f06d85;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: border 0.3s ease-in;
+}
+
+.left a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.left a:active {
+    color: #f06d85;
+}
+
+i {
+    font-weight: 800;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    margin: 17vh 0;
+    align-items: center;
+}
+
+.firstSection>div {
+    width: 35%;
+}
+
+.leftsection {
+    font-size: 2.3rem;
+}
+
+.rightsection img {
+    width: 80%;
+}
+
+.purple,
+#element {
+    /* color: rgb(170, 107, 228); */
+    color: rgb(135, 73, 193);
+}
+
+main hr {
+    background-color: #9c97f1;
+    border: 0;
+    height: 0.8px;
+    margin: 40px 68px;
+}
+
+.secondSection {
+    max-width: 80vw;
+    margin-left: 98px;
+}
+
+.aboutme {
+    margin: 17px 5px 17px 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: normal;
+    font-size: large;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill-card {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.skills>h3 {
+    width: 100%;
+}
+
+.skill-card ul {
+    margin: 5px;
+    padding: 5px;
+}
+
+#heading2 {
+    margin-left: 98px;
+}
+
+footer {
+    background-color: rgb(13, 13, 43);
+    color: white;
+    height: 35vh;
+
+}
+
+.footer {
+    display: flex;
+    padding: 20px 110px;
+    justify-content: space-around;
+}
+
+
+.contact-me {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 8px;
+    margin: 8px;
+    justify-content: center;
+    /* margin-top: 50px; */
+}
+
+#contact1 {
+    margin: 10px;
+}
+
+.contact-me a {
+    font-size: large;
+    margin: 15px;
+    text-decoration: none;
+    color: #ccc;
+    padding: 5px;
+}
+
+#contact {
+    margin: 8px;
+    padding: 7px;
+    font-size: small;
+}
+
+.icons {
+    width: 36px;
+    height: 35px;
+    /* margin: 4px; */
+}
+
+#popupContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color:#9c97f1 ;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 250px;
+    height: 75px;
+    border-radius: 9px;
+    padding: 13px;
+    padding-top: 23px;
+    color: black;
+    font-weight: 800;
+}
+
+.social-icons {
+    margin-top: 12px;
+}
+
+.icons {
+    margin: 0 10px;
+}
+
+
+/* nav bar responsiveness */
+
+.menu-icon i {
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    color: black;
+    font-size: 23px;
+    /* z-index: 2000; */
+}
+
+.cross {
+    display: none;
+    position: absolute;
+    left: -60px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+}
+
+
+nav .fas{
+    display: block;
+    color: aliceblue;
+    margin: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.menu-icon i {
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    color: black;
+    font-size: 23px;
+    /* z-index: 2000; */
+}
+
+.bar{
+    width: 30px;
+    height: 30px;
+    color: black !important;
+}
+
+@media(max-width: 700px) {
+
+    /* .nav-links ul li{
+            display: block;
+        } */
+
+    .choices{
+        padding: 5px;
+        margin-bottom: 3px;
+    }
+
+    #navLinks {
+        position: fixed;
+        background-color: rgb(33, 33, 121);
+        height: 100vh;
+        width: 230px;
+        top: 0;
+        right: -230px;
+        /* text-align: left; */
+        z-index: 2;
+        transition: 1s;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navLinks div {
+        flex-direction: column;
+        display: block;
+    }
+
+    .right ul {
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .right {
+        position: absolute;
+        top: 180px;
+        left: 35px;
+        font-size: 22px;
+        width: 100%;
+    }
+
+    .left {
+        position: absolute;
+        top: 90px;
+        /* right: 70px; */
+        width: 100%;
+        left: 12px;
+        font-size: 25px;
+        /* font-weight: 650; */
+
+    }
+
+    .cross {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+
+    nav .fas {
+        display: block;
+        color: aliceblue;
+        margin: 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    #hr {
+        display: block;
+        background-color: #9c97f1;
+        border: 0;
+        height: 0.8px;
+        margin: 40px 68px;
+    }
+
+    footer {
+        color: black;
+        background-color: white;
+        height: 22vh;
+        margin-top: 2px;
+    }
+
+
+}
+
+
+/* RESPONSIVENESS */
+
+@media (min-width: 300px) and (max-width : 550px) {
+    
+    .leftsection {
+        font-size: 18px;
+    }
+
+    .rightsection img{
+        width: 170px;
+        height: 160px;
+        margin-right: 20px;
+    }
+
+    .aboutme p{
+        line-height: normal;
+    }
+
+    .secondSection{
+        margin-left: 38px ;
+    }
+
+    header>.fas{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    #contact {
+        font-size: 14px;
+    }
+
+    #contact1 {
+        font-size: 17px;
+    }
+    #hr {
+        display: block;
+        background-color: #9c97f1;
+        border: 0;
+        height: 0.8px;
+        margin: 40px 40px;
+    }
+
+    footer {
+        color: black;
+        background-color: white;
+        height: 22vh;
+        margin-top: 2px;
+    }
+
+
+}
+
+@media (min-width:550px) and (max-width:1000px){
+    .leftsection {
+        font-size: 1.7rem;
+    }
+
+    #hr {
+        display: block;
+        background-color: #9c97f1;
+        border: 0;
+        height: 0.8px;
+        margin: 40px 50px;
+    }
+
+    footer {
+        color: black;
+        background-color: white;
+        height: 22vh;
+        margin-top: 2px;
+    }
+}
